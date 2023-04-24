@@ -7,8 +7,10 @@ const Form = () => {
   const dispatch = useDispatch();
 
   const addItem = () => {
-    dispatch(listActions.addToList({data : inputRef.current.value}));
-    inputRef.current.value = '';
+    if (inputRef.current.value !== "") {
+      dispatch(listActions.addToList({ data: inputRef.current.value }));
+      inputRef.current.value = "";
+    }
   };
 
   return (
