@@ -12,13 +12,13 @@ const Form = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center m-[5rem]">
-      <h1 className="text-[#6C63FF] text-[3rem] font-[600] m-4">
+    <section className="flex flex-col items-center justify-center sm:m-[5rem] m-[1rem]">
+      <h1 className="text-[#6C63FF] sm:text-[3rem] text-[1.75rem] sm:font-[600] font-[500] m-4">
         ADD YOUR TO DO LIST !!
       </h1>
       <input
         ref={inputRef}
-        className=" outline-none border-[3px] border-[#adadad] focus:border-[#6C63FF] p-2 w-[50rem] text-[1.25rem] rounded-xl m-4 shadow-lg text-slate-400"
+        className=" outline-none border-[3px] border-[#adadad] focus:border-[#6C63FF] p-2 2xl:w-[55%] xl:w-[70%] lg:w-[85%] w-[94%] text-[1.25rem] rounded-xl m-4 shadow-lg text-slate-400"
         type="text"
         placeholder="Write yore next To Do"
       />

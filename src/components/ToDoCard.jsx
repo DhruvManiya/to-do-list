@@ -17,13 +17,13 @@ const ToDoCard = ({ item, index }) => {
 
   return (
     <section
-      className={`w-[55%] min-h-[8rem] ${
+      className={`2xl:w-[55%] xl:w-[70%] lg:w-[85%] w-[94%] min-h-[8rem] ${
         !checked
           ? "bg-[#e9e8ff] border-[#a9a4ff]"
           : "bg-[#e7e7e7] border-[#838383]"
-      } border-2 border-[#a9a4ff] rounded-xl shadow-lg flex justify-center items-center my-4`}
+      } border-2 border-[#a9a4ff] rounded-xl shadow-lg flex flex-col sm:flex-row justify-center items-center my-4`}
     >
-      <div className="w-[10%] flex justify-center">
+      <div className="w-[10%] my-4 flex justify-center">
         <input
           type="checkbox"
           className="h-5 w-5"
@@ -31,7 +31,7 @@ const ToDoCard = ({ item, index }) => {
           onChange={() => setChecked(!checked)}
         />
       </div>
-      <div className="w-[70%]">
+      <div className="sm:w-[70%] w-full my-4 sm:block flex flex-col justify-center items-center">
         {edit && !checked && <CardForm index={index} />}
         {checked ? (
           <del
@@ -49,7 +49,7 @@ const ToDoCard = ({ item, index }) => {
           </>
         )}
       </div>
-      <div className="w-[20%] flex justify-center gap-4">
+      <div className="w-[20%] flex my-4 justify-center gap-4">
         <div
           className="text-[#2d963b93] hover:text-[#2d963b] cursor-pointer"
           onClick={() => (!checked ? setEdit(!edit) : setEdit(edit))}
