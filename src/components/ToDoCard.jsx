@@ -34,16 +34,18 @@ const ToDoCard = ({ item, index }) => {
       <div className="sm:w-[70%] w-full my-4 sm:block flex flex-col justify-center items-center">
         {edit && !checked && <CardForm index={index} />}
         {checked ? (
-          <del
-            className={`italic text-[2rem] font-500 ${
-              !checked ? "text-[#a9a4ff]" : "text-[#a8a8a8]"
-            }`}
-          >
-            {item.data}
-          </del>
+          <div className="w-[100%] overflow-x-scroll">
+            <del
+              className={`italic text-[2rem] pb-2 font-500 pl-3 ${
+                !checked ? "text-[#a9a4ff]" : "text-[#a8a8a8]"
+              }`}
+            >
+              {item.data}
+            </del>
+          </div>
         ) : (
           <>
-            <p className="text-[2.25rem] font-700 text-[#a9a4ff] m-2">
+            <p className="text-[2.25rem] pb-2 font-700 text-[#a9a4ff] pl-3 m-2 max-w-[100%] overflow-x-scroll">
               {item.data}
             </p>
           </>

@@ -9,5 +9,26 @@ body{
 
 *{
   padding:0;
-  marggin:0;
+  margin:0;
+}
+
+::-webkit-scrollbar:vertical{
+  display:none;
+
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+    height: 0.35rem;
+}
+::-webkit-scrollbar-track {
+    opacity: 0;
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #a9a4ff; 
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6C63FF;
 }
